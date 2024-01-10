@@ -1,18 +1,3 @@
-/*
- Navicat Premium Data Transfer
-
- Source Server         : Moonglade server
- Source Server Type    : MySQL
- Source Server Version : 100519 (10.5.19-MariaDB-0+deb11u2)
- Source Host           : 135.181.142.176:3306
- Source Schema         : auth
-
- Target Server Type    : MySQL
- Target Server Version : 100519 (10.5.19-MariaDB-0+deb11u2)
- File Encoding         : 65001
-
- Date: 10/01/2024 11:38:30
-*/
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
