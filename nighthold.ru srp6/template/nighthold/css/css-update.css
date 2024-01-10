@@ -1,0 +1,318 @@
+.inner-content {
+  margin: 110px auto 60px;
+}
+
+@media (max-width: 900px) {
+  .inner-content {
+    margin: 80px auto 60px;
+  }
+}
+
+.donate-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.donate-content__col {
+  width: calc( ( 100% - 30px ) / 2);
+}
+
+@media (max-width: 900px) {
+  .donate-content__col {
+    width: 100%;
+  }
+}
+
+.donate-content__bonuses {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.donate-content__bonuses-title {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.donate-content__bonuses-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px;
+  background: #242423;
+  border-radius: 5px;
+  color: #000;
+  border: 1px solid #4c4c4c;
+}
+
+.donate-content__bonuses-item:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.donate-content__bonuses-item-col {
+  width: calc( ( 100% - 5px ) / 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 540px) {
+  .donate-content__bonuses-item-col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .donate-content__bonuses-item-col:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.donate-content__bonuses-item-name {
+  width: 100px;
+  padding: 6px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #b7b7b7;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+}
+
+.donate-content__bonuses-item-val {
+  width: calc( 100% - 100px - 5px);
+  padding: 5px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #eccc95;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+}
+
+.rating-container .select-server-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 540px) {
+  .rating-container .select-server-menu .nk-menu-heading {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .rating-container .select-server-menu .nk-menu-item {
+    width: 100%;
+  }
+}
+
+.rating-container .select-server-menu #select-server {
+  width: 200px;
+  margin-left: 10px;
+}
+
+@media (max-width: 540px) {
+  .rating-container .select-server-menu #select-server {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 5px;
+  }
+}
+
+.rating-container .nav-tabs {
+  margin: 0px;
+  border-bottom: 1px solid #424242;
+}
+
+.rating-container .nav-tabs-card {
+  padding: 0px;
+}
+
+.rating-container .nav-tabs .nav-item .nav-link {
+  padding: 10px 0px;
+  font-size: 16px;
+  color: #cfcfcf !important;
+}
+
+.rating-container .nav-tabs .nav-item .nav-link.active {
+  color: #eca84c !important;
+}
+
+@media (max-width: 540px) {
+  .rating-container .nav-tabs .nav-item .nav-link {
+    margin-right: 0px;
+  }
+}
+
+.rating-container .tab-content {
+  margin: 0px;
+}
+
+.rating-container table {
+  min-width: 700px;
+}
+
+.rating-container table thead th {
+  background-color: #424242 !important;
+  border: none !important;
+  color: #eccc95 !important;
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 5px;
+  padding: 15px 5px;
+}
+
+.rating-container table th:first-child {
+  padding-left: 5px;
+}
+
+.rating-container table th, .rating-container table td {
+  font-size: 16px;
+  line-height: 16px;
+  color: #cfcfcf;
+  padding: 15px 5px;
+  border-top: 1px solid #424242;
+}
+
+.rating-container table th.align-middle, .rating-container table td.align-middle {
+  text-align: center;
+}
+
+.rating-container #select-server {
+  height: 34px !important;
+}
+
+.rating-container .table-responsive {
+  overflow-x: scroll;
+}
+
+#payment, #server, #select-server {
+  height: 44px !important;
+  border-radius: 4px;
+  border: 1px solid #4c4c4c;
+  padding: 5px 10px 5px 10px;
+  background-color: #242423;
+}
+
+.card-inner {
+  padding-bottom: 0px;
+}
+
+.card-inner input, .card-inner select {
+  height: 44px;
+}
+
+.card-inner .form-group .form-control {
+  background-color: #242423;
+}
+
+.card-inner .input-group {
+  position: relative;
+  margin-top: 5px;
+}
+
+.card-inner .count-bonus {
+  padding: 3px 8px 4px;
+  background: #eca84c;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #000;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
+.card-title {
+  font-family: RomulC;
+  color: #eacd95;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+@media (max-width: 540px) {
+  .card-title {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.irs--round {
+  font-family: Intro, sans-serif;
+}
+
+.irs--round .irs-line, .irs--round .irs-grid-pol, .irs--round .irs-min, .irs--round .irs-max {
+  font-family: Intro, sans-serif;
+  background-color: #4c4c4c;
+  color: #c0c0c0;
+}
+
+.irs--round .irs-single {
+  font-family: Intro, sans-serif;
+  background-color: #eca84c;
+  color: #000;
+}
+
+.irs--round .irs-single::before {
+  border-top-color: #eca84c;
+}
+
+.irs--round .irs-handle {
+  cursor: pointer;
+  border: 4px solid #eca84c;
+  background-color: #4c4c4c;
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+.irs--round .irs-handle:hover, .irs--round .irs-handle.state_hover {
+  background-color: #eca84c;
+}
+
+.irs--round .irs-bar {
+  background-color: #eca84c;
+}

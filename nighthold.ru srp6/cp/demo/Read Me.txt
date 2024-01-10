@@ -1,0 +1,11 @@
+Important:
+Create Database with name "register"
+then import the attached password_reset_temp.sql file
+
+OR You can also create using following query:
+
+CREATE TABLE `password_reset_temp` (
+  `email` varchar(250) NOT NULL,
+  `key` varchar(250) NOT NULL,
+  `expDate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
