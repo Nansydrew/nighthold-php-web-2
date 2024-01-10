@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require_once "../../include/config.php";
     $connect = mysqli_connect("$lichdbip", "$lichdbuser", "$lichdbpass", "$lichdbauth");
@@ -33,7 +32,7 @@ if (mysqli_num_rows($check_NightHoldTag) > 0) {
     $response = [
         "status" => false,
         "type" => 1,
-        "message" => "Такой NightHoldTag уже существует",
+        "message" => "Такой DeSSowerTag уже существует",
         "fields" => ['NightHoldTag']
     ];
 
@@ -83,7 +82,8 @@ if (!empty($error_fields)) {
         "status" => false,
         "type" => 1,
         "message" => "Проверьте правильность полей",
-        "fields" => $error_fields
+        "fields" => $error_fields,
+        "test" => $error_fields,
     ];
 
     echo json_encode($response);
@@ -95,18 +95,17 @@ if ($password === $password_confirmation) {
 
 
     $srp6 = list($salt, $verifier) = GetSRP6RegistrationData(strtoupper($username), $password);
-	$salt = $srp6['salt'];
-    $verifier = $srp6['verifier'];
+	$salt = $srp6[0];
+    $verifier = $srp6[1];
 
-    mysqli_query($connect, "INSERT INTO `account` (`id`, `NightHoldTag`, `username`, `email`, `salt`, 'verifier') VALUES ('$userid', '$NightHoldTag', '$username', '$email', '$salt', '$verifier')");
+    mysqli_query($connect, "INSERT INTO `account` (`NightHoldTag`, `username`, `email`, `salt`, `verifier`) VALUES ( '$NightHoldTag', '$username', '$email', '$salt', '$verifier')");
 	
-
+    
     $response = [
         "status" => true,
         "message" => "Регистрация прошла успешно!",
     ];
     echo json_encode($response);
-
 
 } else {
     $response = [
@@ -136,10 +135,10 @@ function CalculateSRP6Verifier($username, $password, $salt)
     
     // convert back to a byte array (little-endian)
     $verifier = gmp_export($verifier, 1, GMP_LSW_FIRST);
+    $verifier = $verifier;
     
     // pad to 32 bytes, remember that zeros go on the end in little-endian!
-    $verifier = str_pad($verifier, 32, chr(0), STR_PAD_RIGHT);
-    
+
     // done!
     return $verifier;
 }
@@ -147,7 +146,9 @@ function CalculateSRP6Verifier($username, $password, $salt)
 function GetSRP6RegistrationData($username, $password)
 {
     // generate a random salt
+
     $salt = random_bytes(32);
+    
     
     // calculate verifier using this salt
     $verifier = CalculateSRP6Verifier($username, $password, $salt);

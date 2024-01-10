@@ -38,7 +38,6 @@ require_once 'include/config.php';
                     <div class="header__menu menu">
     <nav class="menu__body">
         <ul class="menu__list">
-
 <?php include "include/menu.php"?>
 
             <li class="menu__item" style="padding-left: 53px;">
@@ -288,10 +287,10 @@ require_once 'include/config.php';
 
 <!-- Scripts -->
 <div class="md-overlay"></div>
-
+<script src="template/nighthold/js/jquery-2.1.1.min.js"></script>
 <script src="template/nighthold/js/vendor.min.js"></script>
 <script src="template/nighthold/js/main_home.min.js"></script>
-<script src="template/nighthold/js/jquery-2.1.1.min.js"></script>
+
 
 
 </body>
